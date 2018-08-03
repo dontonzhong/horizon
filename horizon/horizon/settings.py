@@ -75,9 +75,19 @@ WSGI_APPLICATION = 'horizon.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
+    
+
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'hzisql',
+	'HOST': 'hzisql.database.windows.net',
+	'PORT': '1433',
+	'USER': 'czhong@hzisql.database.windows.net',
+	'PASSWORD': 'Olaugh1!n',
+	'OPTIONS': {
+	    'driver': 'ODBC Driver 17 for SQL Server',
+	},
     }
 }
 
