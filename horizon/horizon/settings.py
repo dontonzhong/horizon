@@ -25,13 +25,21 @@ SECRET_KEY = 'q*93%g^u(8ast1)$7-2448v143gsomw+@d@+8wo7=&d%)4gmq8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    '0.0.0.0',
+    'localhost',
+    'www.horizoninsight.net',
+    'horizoninsight.net',
+    '.horizoninsight.net',
+
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -75,7 +83,7 @@ WSGI_APPLICATION = 'horizon.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    
+
 
 
     'default': {
